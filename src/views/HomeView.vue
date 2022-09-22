@@ -60,7 +60,7 @@ const heading = ref('Contact')
         areas of technology & product development.
       </div>
       <div class="projects-button-wrapper">
-        <a href="#projects" class="projects-button">Projects</a>
+        <a href="#projects-wrapper" class="projects-button">Projects</a>
       </div>
     </div>
 
@@ -141,33 +141,35 @@ const heading = ref('Contact')
   flex-direction: column;
   width: 50vw;
   height: 40vh;
-  margin-inline: 30px;
+  margin-inline: 60px;
+  margin-bottom: 40px;
 }
 
 .bio-name {
-  font-size: 40px;
+  font-size: 60px;
   font-weight: bold;
 }
 
 .bio-subtitle {
-  font-size: 20px;
+  font-size: 30px;
   font-weight: bold;
   color: darkcyan;
   margin-bottom: 10px;
 }
 
 .bio-about {
+  font-size: 20px;
   color: darkslategray;
   overflow: auto;
 }
 
-.bio > .projects-button {
+.bio-wrapper > .projects-button-wrapper {
   margin: 5px;
   margin-top: 30px;
 }
 
 /* Projects button */
-.projects-button-wrapper > projects-button {
+.projects-button-wrapper > .projects-button {
   color: darkslategray;
   font-size: 20px;
   font-weight: bold;
@@ -180,7 +182,7 @@ const heading = ref('Contact')
   transition-timing-function: ease-in-out;
 }
 
-.projects-button-wrapper > projects-button:hover {
+.projects-button-wrapper > .projects-button:hover {
   background-color: cyan;
   border: 3px solid lightcyan;
 }
