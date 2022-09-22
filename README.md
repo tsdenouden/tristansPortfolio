@@ -1,4 +1,7 @@
-# app
+# Tristan's Portfolio
+
+Currently in heavy development.
+Please keep out ty
 
 ## Project setup
 ```
