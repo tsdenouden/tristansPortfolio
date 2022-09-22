@@ -127,7 +127,7 @@ const heading = ref('Contact')
 .info-wrapper {
   display: flex;
   flex-direction: row;
-  align-items: end;
+  align-items: flex-end;
   justify-content: between;
   width: 100%;
   height: 100vh;
