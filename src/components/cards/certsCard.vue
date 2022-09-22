@@ -8,18 +8,55 @@ const props = defineProps({
 </script>
 
 <template>
-    <div class="info">
-        <div class="name">
-            {{ title }} 
-            <div v-if="subtitle" class="edu_sub">
-                <span>{{ subtitle }}</span>
+    <div class="certs-wrapper">
+        <div class="certs-info">
+            <div class="certs-name">
+                {{ title }} 
+                <div v-if="subtitle" class="certs-sub">
+                    <span>({{ subtitle }})</span>
+                </div>
+            </div>
+            <div class="certs-date">
+                {{ date }}
             </div>
         </div>
-        <div class="date">
-            {{ date }}
+        <div class="certs-desc">
+            {{ desc }}
         </div>
     </div>
-    <div class="desc">
-        {{ desc }}
-    </div>
 </template>
+
+<style scoped>
+.certs-wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 25vw;
+    margin-left: 20px;
+    margin-bottom: 20px;
+}
+
+.certs-info {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1px;
+}
+
+.certs-name {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.certs-sub {
+    font-size: 18px;
+}
+
+.certs-date {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.certs-desc {
+    font-size: 18px;
+    color: darkcyan;
+}
+</style>

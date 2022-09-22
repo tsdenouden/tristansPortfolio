@@ -24,17 +24,22 @@ const heading = ref('Contact')
       <!-- Links -->
       <div class="header-links">
         <div class="link-item">
-          <a href="" target="_blank" rel="noopener noreferrer">
+          <a href="https://github.com/tsdenouden" target="_blank" rel="noopener noreferrer">
             github.
           </a>
         </div>
         <div class="link-item">
-          <a href="" target="_blank" rel="noopener noreferrer">
+          <a href="https://www.behance.net/tristandenouden" target="_blank" rel="noopener noreferrer">
             behance.
           </a>
         </div>
         <div class="link-item">
-          <a href="#contact">
+          <a href="https://www.youtube.com/channel/UCFtJ-g7eYrA9LUcaSOiBBBA" target="_blank" rel="noopener noreferrer">
+            youtube.
+          </a>
+        </div>
+        <div class="link-item">
+          <a href="#contact-footer">
             contact.
           </a>
         </div>
@@ -78,7 +83,9 @@ const heading = ref('Contact')
   </div>
 
   <div class="edu-list">
+    <span class="edu-title">Education.</span>
     <eduContainer />
+    <span class="edu-hr">Certificate courses.</span>
     <certsContainer />
   </div>
 
@@ -109,6 +116,7 @@ const heading = ref('Contact')
 .header-name {
   font-size: 20px;
   font-weight: bold;
+  margin-left: 20px;
 }
 
 .header-links {
@@ -119,7 +127,7 @@ const heading = ref('Contact')
   color: darkcyan;
   font-weight: bold;
   text-decoration: none;
-  margin-left: 20px;
+  margin-inline: 20px;
 }
 
 
@@ -131,7 +139,7 @@ const heading = ref('Contact')
   justify-content: between;
   width: 100%;
   height: 100vh;
-  background-image: linear-gradient(to right, white, lightcyan);
+  background-image: linear-gradient(to right, white, lightblue);
 }
 
 
@@ -187,6 +195,7 @@ const heading = ref('Contact')
   border: 3px solid lightcyan;
 }
 
+
 /* Projects section */
 #projects-wrapper > h1 {
   font-size: 50px;
@@ -195,6 +204,36 @@ const heading = ref('Contact')
 }
 
 #projects-wrapper > #projects-list {
+  margin-inline: 40px;
+}
+
+
+/* Education */
+.edu-list {
+  display: flex;
+  flex-direction: column;
+  margin-left: 50px;
+}
+
+.edu-list > .edu-title {
+  font-size: 50px;
+  font-weight: bold;
+  padding-top: 75px;
+  margin-bottom: 50px;
+}
+
+.edu-hr {
+  font-size: 25px;
+  font-weight: bold;
+  text-decoration: underline;
+  margin-top: 15px;
+  margin-bottom: 30px;
+}
+
+
+/* Footer */
+#contact-footer {
+  margin-top: 100px;
   margin-inline: 40px;
 }
 </style>

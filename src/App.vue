@@ -13,6 +13,7 @@
 
 html {
   scroll-behavior: smooth;
+  border-bottom: 15px solid lightseagreen;
 }
 
 body {

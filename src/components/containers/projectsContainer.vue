@@ -32,7 +32,7 @@ const project_list = reactive([
     "image": "stocks",
     "imageAlt": "an image of the Stocks web app open on the portfolio page.",
     "tools": ["Flask", "Bootstrap", "SQLite 3", "IEX Cloud Core Data API"],
-    "github": "https://github.com/tsdenouden/enoto-markdown"
+    "github": "https://github.com/tsdenouden/miscProjects/tree/main/finance"
   },
   {
     "id": 3,
@@ -49,7 +49,7 @@ const project_list = reactive([
     "image": "",
     "imageAlt": "an image of the edge detection filter being applied to a bitmap image.",
     "tools": ["C"],
-    "github": "https://github.com/tsdenouden/enoto-markdown"
+    "github": "https://github.com/tsdenouden/miscProjects/tree/main/filter-more"
   },
   {
     "id": 4,
@@ -62,7 +62,7 @@ const project_list = reactive([
     "image": "benkyough",
     "imageAlt": "an image of Benkyou's Pomodoro timer.",
     "tools": ["Vue.js", "Tailwind", "Vercel"],
-    "github": "https://github.com/tsdenouden/enoto-markdown"
+    "github": "https://github.com/tsdenouden/benkyouApp"
   },
   {
     "id": 5,
@@ -70,13 +70,13 @@ const project_list = reactive([
     "title": "Recipe REST API",
     "subtitle": "",
     "body": `This Recipes API helps you store the recipes of your favourite dishes alongside images & extra descriptions. 
-    The purpose of this project was to learn and practisebuilding a REST API. I learnt about RESTful API guidelines, HTTP 
+    The purpose of this project was to learn and practise building a REST API. I learnt about RESTful API guidelines, HTTP 
     requests & status codes, testing API endpoints with a REST Client (Postman & SwaggerUI), and Docker (Container, Image, 
     Deploying on Docker Hub).I used FastAPI to build this project, SwaggerUI for the documentation website & Docker.`,
     "image": "docs_screenshot",
     "imageAlt": "an image of the Recipe API Swagger docs site.",
     "tools": ["FastAPI", "Pydantic", "Docker"],
-    "github": "https://github.com/tsdenouden/enoto-markdown"
+    "github": "https://github.com/tsdenouden/recipeRESTAPI"
   },
   {
     "id": 6,
@@ -87,7 +87,7 @@ const project_list = reactive([
     "image": "",
     "imageAlt": "an image of my portfolio website.",
     "tools": ["Vue.js", "Github Pages"],
-    "github": "https://github.com/tsdenouden/enoto-markdown"
+    "github": "https://github.com/tsdenouden/tsdenouden.github.io"
   },
   {
     "id": 7,
@@ -99,7 +99,7 @@ const project_list = reactive([
     "image": "spoderbirb",
     "imageAlt": "an image of spoderbirb's thumbnail.",
     "tools": ["GML Code"],
-    "github": "https://github.com/tsdenouden/enoto-markdown"
+    "itchio": "https://tristanshawn.itch.io/spoderbirb"
   },
 ])
 </script>
@@ -108,7 +108,7 @@ const project_list = reactive([
     <div class="projects">
         <div v-for="proj in project_list" :key="proj.id">
         <projectCard :year="proj.date" :grade="proj.grade" :title="proj.title" :subtitle="proj.subtitle" :body="proj.body"
-        :image="proj.image" :imageAlt="proj.imageAlt" :tools="proj.tools" :github="proj.github" />
+        :image="proj.image" :imageAlt="proj.imageAlt" :tools="proj.tools" :github="proj.github" :itchio="proj.itchio" />
         </div>
     </div>
 </template>

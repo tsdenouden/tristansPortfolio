@@ -8,7 +8,8 @@ const props = defineProps({
     image: String,
     imageAlt: String,
     tools: Array[String],
-    github: String
+    github: String,
+    itchio: String
 })
 
 
@@ -49,8 +50,11 @@ const getImgUrl = (pic) => {
                     </div>
                 </div>
             </div>
-            <div class="github">
+            <div v-if="github" class="github">
                 <a :href="github" target="_blank" rel="noopener noreferrer">Github</a>
+            </div>
+            <div v-if="itchio" class="itchio">
+                <a :href="itchio" target="_blank" rel="noopener noreferrer">itch.io</a>
             </div>
         </div>
         <!-- Project image preview -->
@@ -74,7 +78,7 @@ const getImgUrl = (pic) => {
 }
 
 .project-card:hover {
-    transform: translate(0px, -5px);
+    transform: translate(0px, -2px);
     border-bottom: 5px solid darkcyan;
 }
 
@@ -152,5 +156,25 @@ const getImgUrl = (pic) => {
     height: auto;
     margin-left: 10px;
     overflow: hidden;
+}
+
+/* itchio */
+.itchio {
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.itchio > a {
+    color: whitesmoke;
+    font-weight: bold;
+    text-decoration: none;
+    background-color: lightcoral;
+    border: 1px solid transparent;
+    border-radius: 0.375rem;
+    padding: 2px 8px 2px 8px;
+}
+
+.itchio > a:hover {
+    background-color: coral;
 }
 </style>

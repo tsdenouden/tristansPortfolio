@@ -32,14 +32,14 @@ const certs_list = reactive([
     "id": 5,
     "date": 2022,
     "title": "Pandas",
-    "subtitle": "(Python)",
+    "subtitle": "Python",
     "desc": "Kaggle"
   },
   {
     "id": 6,
     "date": 2021,
     "title": "Python is Easy",
-    "subtitle": "(Python 3 fundamentals)",
+    "subtitle": "Python 3 fundamentals",
     "desc": "Pirple"
   },
 ])
