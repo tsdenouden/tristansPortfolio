@@ -1,6 +1,8 @@
 <script setup>
 import { ref } from '@vue/reactivity'
 
+document.title = "Tristan's Portfolio"
+
 // containers
 import projectsContainer from '../components/containers/projectsContainer.vue'
 import eduContainer from '../components/containers/eduContainer.vue'
@@ -14,26 +16,28 @@ const heading = ref('Contact')
 
 <template>
   <!-- Header & nav bar -->
-  <div class="header">
-    <div>
-      tristan.
-    </div>
-    <!-- Links -->
-    <div class="links">
-      <div class="nav-item">
-        <a href="" target="_blank" rel="noopener noreferrer">
-          github.
-        </a>
+  <div class="sticky_header">
+    <div class="header">
+      <div class="name">
+        tristan.
       </div>
-      <div class="nav-item">
-        <a href="" target="_blank" rel="noopener noreferrer">
-          behance.
-        </a>
-      </div>
-      <div class="nav-item">
-        <a href="" target="_blank" rel="noopener noreferrer">
-          contact.
-        </a>
+      <!-- Links -->
+      <div class="links">
+        <div class="nav-item">
+          <a href="" target="_blank" rel="noopener noreferrer">
+            github.
+          </a>
+        </div>
+        <div class="nav-item">
+          <a href="" target="_blank" rel="noopener noreferrer">
+            behance.
+          </a>
+        </div>
+        <div class="nav-item">
+          <a href="" target="_blank" rel="noopener noreferrer">
+            contact.
+          </a>
+        </div>
       </div>
     </div>
   </div>
@@ -56,7 +60,7 @@ const heading = ref('Contact')
         areas of technology & product development.
       </div>
       <div class="proj_button">
-        <a href="" class="projs" target="_blank" rel="noopener noreferrer">Projects</a>
+        <a href="#projects" class="projs">Projects</a>
       </div>
     </div>
 
@@ -66,9 +70,11 @@ const heading = ref('Contact')
     </div>
   </div>
 
-  <div class="projects">
+  <div id="projects">
     <h1>Projects.</h1>
-    <projectsContainer />
+    <div id="projects_container">
+      <projectsContainer />
+    </div>
   </div>
 
   <div class="edu">
@@ -81,3 +87,112 @@ const heading = ref('Contact')
   </div>
 
 </template>
+
+<style scoped>
+/* Header/navbar */
+/* Make header sticky */
+.sticky_header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  background-color: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(2px);
+  padding: 20px;
+}
+
+.header > .name {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.header > .links {
+  display: flex;
+}
+
+.links > .nav-item > a {
+  color: darkcyan;
+  font-weight: bold;
+  text-decoration: none;
+  margin-left: 20px;
+}
+
+
+/* Main top section including bio & portrait photo */
+.main {
+  display: flex;
+  flex-direction: row;
+  align-items: end;
+  justify-content: between;
+  width: 100vw;
+  height: 100vh;
+  background-image: linear-gradient(to right, white, lightcyan);
+}
+
+
+/* Bio, info & link to projects */
+.bio {
+  display: flex;
+  flex-direction: column;
+  width: 50vw;
+  height: 40vh;
+  margin-inline: 30px;
+}
+
+.bio > .name {
+  font-size: 40px;
+  font-weight: bold;
+}
+
+.bio > .subtitle {
+  font-size: 20px;
+  font-weight: bold;
+  color: darkcyan;
+  margin-bottom: 10px;
+}
+
+.bio > .aboutme {
+  color: darkslategray;
+  overflow: auto;
+}
+
+.bio > .proj_button {
+  margin: 5px;
+  margin-top: 30px;
+}
+
+/* Project button */
+.proj_button > .projs {
+  color: darkslategray;
+  font-size: 20px;
+  font-weight: bold;
+  text-decoration: none;
+  background-color: lightgreen;
+  border: 1px solid lightgreen;
+  border-radius: 15px 50px;
+  padding: 8px 20px 8px 20px;
+  transition-duration: 300ms;
+  transition-timing-function: ease-in-out;
+}
+
+.proj_button > .projs:hover {
+  border: 1px solid cyan;
+  background-color: cyan;
+}
+
+/* Projects section */
+#projects > h1 {
+  font-size: 50px;
+  margin-left: 30px;
+  padding-top: 125px;
+}
+
+#projects > #projects_container {
+  margin-inline: 40px;
+  overflow: auto;
+}
+</style>

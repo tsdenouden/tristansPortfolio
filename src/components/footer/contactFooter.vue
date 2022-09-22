@@ -26,3 +26,10 @@ const props = defineProps({
         </div>
     </div>
 </template>
+
+<style scoped>
+.icons {
+    margin-inline: 40px;
+    overflow: auto;
+}
+</style>
