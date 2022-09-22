@@ -23,7 +23,7 @@ const project_list = reactive([
     "date": 2022,
     "grade": 96,
     "title": "Stocks Web App",
-    "subtitle": "../../assets/project-thumbnails/stocks.png",
+    "subtitle": "",
     "body": `A stock-trading app with real prices fetched from the IEX Cloud Core Data API. Users can
     create an account and login to quote, buy or sell a stock. They can view all their stocks in their 
     account's portfolio & keep track of their actions in the transaction history.  The app's backend is 
@@ -48,7 +48,7 @@ const project_list = reactive([
     one to detect vertical edges and one to detect horizontal edges.`,
     "image": "",
     "imageAlt": "an image of the edge detection filter being applied to a bitmap image.",
-    "tools": ["C programming language"],
+    "tools": ["C"],
     "github": "https://github.com/tsdenouden/enoto-markdown"
   },
   {
@@ -86,7 +86,7 @@ const project_list = reactive([
     "body": `UHUAHSUDYHASHD`,
     "image": "",
     "imageAlt": "an image of my portfolio website.",
-    "tools": ["Vue.js", "Sass", "Github Pages"],
+    "tools": ["Vue.js", "Github Pages"],
     "github": "https://github.com/tsdenouden/enoto-markdown"
   },
   {

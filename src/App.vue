@@ -17,6 +17,8 @@ html {
 
 body {
   background-color: whitesmoke;
+  margin: 0px;
+  padding: 0px;
 }
 
 nav {

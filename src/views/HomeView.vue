@@ -34,7 +34,7 @@ const heading = ref('Contact')
           </a>
         </div>
         <div class="nav-item">
-          <a href="" target="_blank" rel="noopener noreferrer">
+          <a href="#contact">
             contact.
           </a>
         </div>
@@ -82,7 +82,7 @@ const heading = ref('Contact')
     <certsContainer />
   </div>
 
-  <div>
+  <div id="contact">
     <contactFooter :heading="heading" :email="gmail" />
   </div>
 
@@ -95,6 +95,7 @@ const heading = ref('Contact')
   position: fixed;
   top: 0;
   width: 100%;
+  z-index: 1;
 }
 
 .header {
@@ -128,7 +129,7 @@ const heading = ref('Contact')
   flex-direction: row;
   align-items: end;
   justify-content: between;
-  width: 100vw;
+  width: 100%;
   height: 100vh;
   background-image: linear-gradient(to right, white, lightcyan);
 }
@@ -171,8 +172,8 @@ const heading = ref('Contact')
   font-size: 20px;
   font-weight: bold;
   text-decoration: none;
-  background-color: lightgreen;
-  border: 1px solid lightgreen;
+  background-color: lightcyan;
+  border: 3px solid cyan;
   border-radius: 15px 50px;
   padding: 8px 20px 8px 20px;
   transition-duration: 300ms;
@@ -180,8 +181,8 @@ const heading = ref('Contact')
 }
 
 .proj_button > .projs:hover {
-  border: 1px solid cyan;
   background-color: cyan;
+  border: 3px solid lightcyan;
 }
 
 /* Projects section */
@@ -193,6 +194,5 @@ const heading = ref('Contact')
 
 #projects > #projects_container {
   margin-inline: 40px;
-  overflow: auto;
 }
 </style>
