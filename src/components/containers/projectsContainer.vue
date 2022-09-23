@@ -15,7 +15,7 @@ const project_list = reactive([
     theme editor uses a Python module I wrote for generating basic CSS templates.`,
     "image": "enoto",
     "imageAlt": "an image of Enoto with a markdown document open in the editor.",
-    "tools": ["Flask", "Tailwind", "PIL", "Heroku"],
+    "tools": ["Flask", "Tailwind", "PIL", "PythonMarkdown API","Heroku"],
     "github": "https://github.com/tsdenouden/enoto-markdown"
   },
   {
@@ -28,7 +28,7 @@ const project_list = reactive([
     create an account and login to quote, buy or sell a stock. They can view all their stocks in their 
     account's portfolio & keep track of their actions in the transaction history.  The app's backend is 
     written in Flask and I used Bootstrap's CSS component library for quick frontend development. The databases 
-    were designed in the SQlite3 database engine.`,
+    were designed in the SQLite3 database engine.`,
     "image": "stocks",
     "imageAlt": "an image of the Stocks web app open on the portfolio page.",
     "tools": ["Flask", "Bootstrap", "SQLite 3", "IEX Cloud Core Data API"],
@@ -46,7 +46,7 @@ const project_list = reactive([
     for the output. The edge detection filter is my implementation of the Sobel operator algorithm which works by 
     estimating the first derivative of an image by doing a convolution between an input and two special kernels, 
     one to detect vertical edges and one to detect horizontal edges.`,
-    "image": "",
+    "image": "filterphoto",
     "imageAlt": "an image of the edge detection filter being applied to a bitmap image.",
     "tools": ["C"],
     "github": "https://github.com/tsdenouden/miscProjects/tree/main/filter-more"
@@ -72,7 +72,7 @@ const project_list = reactive([
     "body": `This Recipes API helps you store the recipes of your favourite dishes alongside images & extra descriptions. 
     The purpose of this project was to learn and practise building a REST API. I learnt about RESTful API guidelines, HTTP 
     requests & status codes, testing API endpoints with a REST Client (Postman & SwaggerUI), and Docker (Container, Image, 
-    Deploying on Docker Hub).I used FastAPI to build this project, SwaggerUI for the documentation website & Docker.`,
+    Deploying on Docker Hub). I used FastAPI to build this project, SwaggerUI for the documentation website & Docker.`,
     "image": "docs_screenshot",
     "imageAlt": "an image of the Recipe API Swagger docs site.",
     "tools": ["FastAPI", "Pydantic", "Docker"],
@@ -95,7 +95,7 @@ const project_list = reactive([
     "title": "Spoderbirb",
     "subtitle": "minimalist 2D action shooter",
     "body": `Rank #141 overall and #99 in audio in #FFS2020 Game Jam. Spoderbirb is an arcade-style game written in GML Code.
-    Pixel art & animations done in Piskel.Created the website for the game with itch.io and published the game there.`,
+    Pixel art & animations done in Piskel. Created the website for the game with itch.io and published the game there.`,
     "image": "spoderbirb",
     "imageAlt": "an image of spoderbirb's thumbnail.",
     "tools": ["GML Code"],

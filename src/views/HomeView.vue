@@ -179,7 +179,7 @@ const heading = ref('Contact')
 /* Projects button */
 .projects-button-wrapper > .projects-button {
   color: darkslategray;
-  font-size: 20px;
+  font-size: 25px;
   font-weight: bold;
   text-decoration: none;
   background-color: lightcyan;
