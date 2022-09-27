@@ -11,37 +11,37 @@ const certs_list = reactive([
   },
   {
     "id": 2,
-    "date": 2019,
-    "title": "Express Course",
-    "subtitle": "Programming fundamentals course",
-    "desc": "Sponsored by Microsoft"
-  },
-  {
-    "id": 3,
     "date": 2022,
     "title": "Intermediate Machine Learning",
     "desc": "Kaggle"
   },
   {
-    "id": 4,
+    "id": 3,
     "date": 2022,
     "title": "Intro to Machine Learning",
     "desc": "Kaggle"
   },
   {
-    "id": 5,
+    "id": 4,
     "date": 2022,
     "title": "Pandas",
     "subtitle": "Python",
     "desc": "Kaggle"
   },
   {
-    "id": 6,
+    "id": 5,
     "date": 2021,
     "title": "Python is Easy",
     "subtitle": "Python 3 fundamentals",
     "desc": "Pirple"
   },
+  {
+    "id": 6,
+    "date": 2019,
+    "title": "Express Course",
+    "subtitle": "Programming fundamentals course",
+    "desc": "Sponsored by Microsoft"
+  }
 ])
 </script>
 

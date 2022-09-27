@@ -88,8 +88,12 @@ const project_list = reactive([
     "date": 2022,
     "title": "Portfolio Website",
     "subtitle": "",
-    "body": `UHUAHSUDYHASHD`,
-    "image": "",
+    "body": `a fully responsive single page application made with Vue.js & deployed to Github Pages.
+    For this project, I decided to brush up on my CSS skills by not opting into a framework or library.
+    In the portfolio, projects & certifications are simply an array of Javascript objects that are rendered 
+    as a list of card components. This allows me to spend more time revising my portfolio's content rather than
+    manually editing my HTML/CSS over and over.`,
+    "image": "portfolioimg",
     "imageAlt": "an image of my portfolio website.",
     "tools": ["Vue.js", "Github Pages"],
     "mobileTools": ["Vue.js", "Github Pages"],
