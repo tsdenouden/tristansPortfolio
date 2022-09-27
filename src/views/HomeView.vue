@@ -71,7 +71,7 @@ const heading = ref('Contact')
 
     <!-- Image -->
     <div class="info-portrait">
-      <img src="" class="portrait-img" alt="">
+      <img src="../assets/pic/tristan.png" class="portrait-img" alt="">
     </div>
   </div>
 
@@ -134,12 +134,22 @@ const heading = ref('Contact')
 /* Main top section including bio & portrait photo */
 .info-wrapper {
   display: flex;
-  flex-direction: row;
   align-items: flex-end;
-  justify-content: between;
+  justify-content: space-between;
   width: 100%;
   height: 100vh;
   background-image: linear-gradient(to right, white, lightblue);
+}
+
+.info-portrait {
+  display: flex;
+  justify-content: end;
+  align-items: flex-end;
+}
+
+.info-portrait > img {
+  width: 100%;
+  height: auto;
 }
 
 
@@ -147,10 +157,8 @@ const heading = ref('Contact')
 .bio-wrapper {
   display: flex;
   flex-direction: column;
-  width: 50vw;
-  height: 40vh;
-  margin-inline: 60px;
-  margin-bottom: 40px;
+  margin-left: 100px;
+  margin-bottom: 200px;
 }
 
 .bio-name {
