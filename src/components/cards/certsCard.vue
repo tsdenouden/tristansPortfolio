@@ -59,4 +59,10 @@ const props = defineProps({
     font-size: 18px;
     color: darkcyan;
 }
+
+@media all and (max-width: 1200px) {
+    .certs-wrapper {
+        width: 90%;
+    }
+}
 </style>

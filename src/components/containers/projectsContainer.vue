@@ -16,6 +16,7 @@ const project_list = reactive([
     "image": "enoto",
     "imageAlt": "an image of Enoto with a markdown document open in the editor.",
     "tools": ["Flask", "Tailwind", "PIL", "PythonMarkdown API","Heroku"],
+    "mobileTools": ["Flask", "Tailwind", "PIL", "PythonMarkdown","Heroku"],
     "github": "https://github.com/tsdenouden/enoto-markdown"
   },
   {
@@ -32,6 +33,7 @@ const project_list = reactive([
     "image": "stocks",
     "imageAlt": "an image of the Stocks web app open on the portfolio page.",
     "tools": ["Flask", "Bootstrap", "SQLite 3", "IEX Cloud Core Data API"],
+    "mobileTools": ["Flask", "Bootstrap", "SQLite", "IEX Core Data API"],
     "github": "https://github.com/tsdenouden/miscProjects/tree/main/finance"
   },
   {
@@ -49,6 +51,7 @@ const project_list = reactive([
     "image": "filterphoto",
     "imageAlt": "an image of the edge detection filter being applied to a bitmap image.",
     "tools": ["C"],
+    "mobileTools": ["C"],
     "github": "https://github.com/tsdenouden/miscProjects/tree/main/filter-more"
   },
   {
@@ -62,6 +65,7 @@ const project_list = reactive([
     "image": "benkyough",
     "imageAlt": "an image of Benkyou's Pomodoro timer.",
     "tools": ["Vue.js", "Tailwind", "Vercel"],
+    "mobileTools": ["Vue.js", "Tailwind", "Vercel"],
     "github": "https://github.com/tsdenouden/benkyouApp"
   },
   {
@@ -76,6 +80,7 @@ const project_list = reactive([
     "image": "docs_screenshot",
     "imageAlt": "an image of the Recipe API Swagger docs site.",
     "tools": ["FastAPI", "Pydantic", "Docker"],
+    "mobileTools": ["FastAPI", "Pydantic", "Docker"],
     "github": "https://github.com/tsdenouden/recipeRESTAPI"
   },
   {
@@ -87,6 +92,7 @@ const project_list = reactive([
     "image": "",
     "imageAlt": "an image of my portfolio website.",
     "tools": ["Vue.js", "Github Pages"],
+    "mobileTools": ["Vue.js", "Github Pages"],
     "github": "https://github.com/tsdenouden/tsdenouden.github.io"
   },
   {
@@ -99,6 +105,7 @@ const project_list = reactive([
     "image": "spoderbirb",
     "imageAlt": "an image of spoderbirb's thumbnail.",
     "tools": ["GML Code"],
+    "mobileTools": ["GML Code"],
     "itchio": "https://tristanshawn.itch.io/spoderbirb"
   },
 ])
@@ -108,7 +115,8 @@ const project_list = reactive([
     <div class="projects">
         <div v-for="proj in project_list" :key="proj.id">
         <projectCard :year="proj.date" :grade="proj.grade" :title="proj.title" :subtitle="proj.subtitle" :body="proj.body"
-        :image="proj.image" :imageAlt="proj.imageAlt" :tools="proj.tools" :github="proj.github" :itchio="proj.itchio" />
+        :image="proj.image" :imageAlt="proj.imageAlt" :tools="proj.tools" :mobileTools="proj.mobileTools" :github="proj.github"
+        :itchio="proj.itchio" />
         </div>
     </div>
 </template>

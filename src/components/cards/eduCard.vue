@@ -52,4 +52,9 @@ const props = defineProps({
     color: darkcyan;
 }
 
+@media all and (max-width: 1200px) {
+    .edu-wrapper {
+        width: 90%;
+    }
+}
 </style>s

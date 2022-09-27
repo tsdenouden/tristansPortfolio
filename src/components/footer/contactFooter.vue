@@ -69,4 +69,14 @@ const props = defineProps({
     width: 100%;
     height: auto;
 }
+
+@media all and (max-width: 1200px) {
+    .contact-icons > a {
+        width: 10%;
+    }
+
+    .contact-icons > .yt-icon {
+        width: 14%;
+    }
+}
 </style>

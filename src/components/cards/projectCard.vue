@@ -1,4 +1,6 @@
 <script setup>
+const { onMounted, ref }=require("@vue/runtime-core")
+
 const props = defineProps({
     year: Number,
     grade: Number,
@@ -8,6 +10,7 @@ const props = defineProps({
     image: String,
     imageAlt: String,
     tools: Array[String],
+    mobileTools: Array[String],
     github: String,
     itchio: String
 })
@@ -17,6 +20,25 @@ const props = defineProps({
 const getImgUrl = (pic) => {
     const images = require.context('../../assets/project-thumbnails', false, /\.png$/)
     return images('./' + pic + '.png')
+}
+
+
+// update viewport width & check for breakpoint
+const viewWidth = ref(window.innerWidth)
+const mdBreakpoint = ref(false)
+
+onMounted(() => {
+    updateWidth()
+    window.addEventListener('resize', updateWidth)
+})
+
+const updateWidth = () => {
+    viewWidth.value = window.innerWidth
+    if (viewWidth.value <= 1200) {
+        mdBreakpoint.value = true;
+    } else {
+        mdBreakpoint.value = false;
+    }
 }
 </script>
 
@@ -42,7 +64,8 @@ const getImgUrl = (pic) => {
                 {{ body }}
             </div>
             <br>
-            <div class="tools">
+
+            <div v-if="!mdBreakpoint" class="tools">
                 <span class="label">Tools used:</span>
                 <div v-for="tool in tools" :key="tool.index">
                     <div class="tool">
@@ -50,6 +73,16 @@ const getImgUrl = (pic) => {
                     </div>
                 </div>
             </div>
+
+            <div v-if="mdBreakpoint" class="tools">
+                <span class="label">Tools used:</span>
+                <div v-for="tool in mobileTools" :key="tool.index">
+                    <div class="tool">
+                        {{ tool }}
+                    </div>
+                </div>
+            </div>
+
             <div v-if="github" class="github">
                 <a :href="github" target="_blank" rel="noopener noreferrer">Github</a>
             </div>
@@ -82,6 +115,16 @@ const getImgUrl = (pic) => {
     border-bottom: 5px solid darkcyan;
 }
 
+@media all and (max-width: 1200px) {
+    .project-card {
+        flex-direction: column-reverse;
+        background-color: white;
+        border-radius: 1%;
+        padding: 30px;
+    }
+}
+
+
 /* Written content//info */
 .info {
     display: flex;
@@ -111,10 +154,12 @@ const getImgUrl = (pic) => {
     font-weight: bold;
 }
 
+
 /* List of project tools */
 .tools {
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     align-items: center;
 }
 
@@ -129,6 +174,18 @@ const getImgUrl = (pic) => {
     border-radius: 0.375rem;
     margin-left: 10px;
     padding: 2px 8px 2px 8px;
+    margin-bottom: 5px;
+}
+
+@media all and (max-width: 1200px) {
+    .tools > .label {
+        display: none;
+    }
+
+    .tool {
+        margin-left: 0px;
+        margin-inline: 3px;
+    }
 }
 
 .github {
@@ -144,11 +201,22 @@ const getImgUrl = (pic) => {
     border: 1px solid transparent;
     border-radius: 0.375rem;
     padding: 2px 8px 2px 8px;
+    transition-duration: 300ms;
+    transition-timing-function: ease-in-out;
 }
 
 .github > a:hover {
     background-color: darkseagreen;
 }
+
+@media all and (max-width: 1200px) {
+    .github {
+        margin-top: 25px;
+        margin-left: 3px;
+        margin-bottom: 0px;
+    }
+}
+
 
 /* Project thumbnail */
 .pic > img {
@@ -157,6 +225,21 @@ const getImgUrl = (pic) => {
     margin-left: 10px;
     overflow: hidden;
 }
+
+@media all and (max-width: 1200px) {
+    .pic {
+    display: flex;
+    justify-content: center;
+    }
+
+    .pic > img {
+        width: 90%;
+        margin-left: 0px;
+        margin-inline: 10px;
+        margin-bottom: 20px;
+    }
+}
+
 
 /* itchio */
 .itchio {
@@ -172,9 +255,19 @@ const getImgUrl = (pic) => {
     border: 1px solid transparent;
     border-radius: 0.375rem;
     padding: 2px 8px 2px 8px;
+    transition-duration: 300ms;
+    transition-timing-function: ease-in-out;
 }
 
 .itchio > a:hover {
     background-color: coral;
+}
+
+@media all and (max-width: 1200px) {
+    .itchio {
+        margin-top: 25px;
+        margin-left: 3px;
+        margin-bottom: 0px;
+    }
 }
 </style>

@@ -130,6 +130,12 @@ const heading = ref('Contact')
   margin-inline: 20px;
 }
 
+@media all and (max-width: 1200px) {
+  .sticky-header {
+    display: none;
+  }
+}
+
 
 /* Main top section including bio & portrait photo */
 .info-wrapper {
@@ -143,13 +149,23 @@ const heading = ref('Contact')
 
 .info-portrait {
   display: flex;
-  justify-content: end;
+  justify-content: flex-end;
   align-items: flex-end;
 }
 
 .info-portrait > img {
   width: 100%;
   height: auto;
+}
+
+@media all and (max-width: 1200px) {
+  .info-wrapper {
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    height: 100%;
+    padding-top: 60px;
+  }
 }
 
 
@@ -184,6 +200,31 @@ const heading = ref('Contact')
   margin-top: 30px;
 }
 
+@media all and (max-width: 1200px) {
+  .bio-wrapper {
+    text-align: left;
+    margin-inline: 40px;
+    margin-bottom: 0px;
+  }
+  
+  .bio-name {
+    font-size: 50px;
+  }
+
+  .bio-subtitle {
+    font-size: 25px;
+    margin-bottom: 10px;
+  }
+
+  .bio-about {
+    font-size: 18px;
+  }
+
+  .bio-wrapper > .projects-button-wrapper {
+    text-align: center;
+  }
+}
+
 /* Projects button */
 .projects-button-wrapper > .projects-button {
   color: darkslategray;
@@ -203,6 +244,12 @@ const heading = ref('Contact')
   border: 3px solid lightcyan;
 }
 
+@media all and (max-width: 1200px) {
+  .projects-button-wrapper > .projects-button {
+    font-size: 20px;
+  }
+}
+
 
 /* Projects section */
 #projects-wrapper > h1 {
@@ -213,6 +260,17 @@ const heading = ref('Contact')
 
 #projects-wrapper > #projects-list {
   margin-inline: 40px;
+}
+
+@media all and (max-width: 1200px) {
+  #projects-wrapper > h1 {
+    font-size: 40px;
+    padding-top: 30px;
+  }
+
+  #projects-wrapper > #projects-list {
+    margin-inline: 10px;
+  }
 }
 
 
@@ -236,6 +294,21 @@ const heading = ref('Contact')
   text-decoration: underline;
   margin-top: 15px;
   margin-bottom: 30px;
+}
+
+@media all and (max-width: 1200px) {
+  .edu-list {
+    margin-left: 20px;
+  }
+
+  .edu-list > .edu-title {
+    font-size: 50px;
+    padding-top: 10px;
+  }
+
+  .edu-hr {
+    font-size: 30px;
+  }
 }
 
 
