@@ -140,17 +140,13 @@ const heading = ref('Contact')
 /* Main top section including bio & portrait photo */
 .info-wrapper {
   display: flex;
-  align-items: flex-end;
-  justify-content: space-between;
   width: 100%;
   height: 100vh;
   background-image: linear-gradient(to right, white, lightblue);
 }
 
 .info-portrait {
-  display: flex;
-  justify-content: flex-end;
-  align-items: flex-end;
+  transform: translate(0, 25vh);
 }
 
 .info-portrait > img {
@@ -162,9 +158,12 @@ const heading = ref('Contact')
   .info-wrapper {
     flex-direction: column;
     justify-content: center;
-    text-align: center;
     height: 100%;
     padding-top: 60px;
+  }
+
+  .info-portrait {
+    transform: translate(0, 0);
   }
 }
 
@@ -173,26 +172,25 @@ const heading = ref('Contact')
 .bio-wrapper {
   display: flex;
   flex-direction: column;
+  transform: translate(0, 40vh);
   margin-left: 100px;
-  margin-bottom: 200px;
 }
 
 .bio-name {
-  font-size: 60px;
+  font-size: 4vw;
   font-weight: bold;
 }
 
 .bio-subtitle {
-  font-size: 30px;
+  font-size: 2vw;
   font-weight: bold;
   color: darkcyan;
   margin-bottom: 10px;
 }
 
 .bio-about {
-  font-size: 20px;
+  font-size: 1.5vw;
   color: darkslategray;
-  overflow: auto;
 }
 
 .bio-wrapper > .projects-button-wrapper {
@@ -202,9 +200,8 @@ const heading = ref('Contact')
 
 @media all and (max-width: 1200px) {
   .bio-wrapper {
-    text-align: left;
     margin-inline: 40px;
-    margin-bottom: 0px;
+    transform: translate(0, 0);
   }
   
   .bio-name {
@@ -228,7 +225,7 @@ const heading = ref('Contact')
 /* Projects button */
 .projects-button-wrapper > .projects-button {
   color: darkslategray;
-  font-size: 25px;
+  font-size: 2vw;
   font-weight: bold;
   text-decoration: none;
   background-color: lightcyan;
