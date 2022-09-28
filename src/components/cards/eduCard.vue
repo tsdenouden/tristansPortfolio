@@ -26,7 +26,6 @@ const props = defineProps({
 .edu-wrapper {
     display: flex;
     flex-direction: column;
-    width: 25vw;
     margin-left: 20px;
     margin-bottom: 20px;
 }

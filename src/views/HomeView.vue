@@ -82,11 +82,16 @@ const heading = ref('Contact')
     </div>
   </div>
 
-  <div class="edu-list">
-    <span class="edu-title">Education.</span>
-    <eduContainer />
-    <span class="edu-hr">Certificate courses.</span>
-    <certsContainer />
+  <div class="edu-section">
+    <div class="edu-img">
+      <img src="../assets/pic/sample2.jpg" alt="Picture of me coding.">
+    </div>
+    <div class="edu-list">
+      <span class="edu-title">Education.</span>
+      <eduContainer />
+      <span class="edu-hr">Certificate courses.</span>
+      <certsContainer />
+    </div>
   </div>
 
   <div id="contact-footer">
@@ -146,12 +151,18 @@ const heading = ref('Contact')
 }
 
 .info-portrait {
-  transform: translate(0, 25vh);
+  transform: translate(0, 15vh);
 }
 
 .info-portrait > img {
   width: 100%;
   height: auto;
+}
+
+@media all and (max-width: 1800px) {
+  .info-portrait {
+    transform: translate(0, 25vh);
+  }
 }
 
 @media all and (max-width: 1200px) {
@@ -172,30 +183,49 @@ const heading = ref('Contact')
 .bio-wrapper {
   display: flex;
   flex-direction: column;
-  transform: translate(0, 40vh);
+  transform: translate(0, 50vh);
   margin-left: 100px;
 }
 
 .bio-name {
-  font-size: 4vw;
+  font-size: 3vw;
   font-weight: bold;
 }
 
 .bio-subtitle {
-  font-size: 2vw;
+  font-size: 1.75vw;
   font-weight: bold;
   color: darkcyan;
   margin-bottom: 10px;
 }
 
 .bio-about {
-  font-size: 1.5vw;
+  font-size: 1vw;
   color: darkslategray;
 }
 
 .bio-wrapper > .projects-button-wrapper {
   margin: 5px;
   margin-top: 30px;
+}
+
+@media all and (max-width: 1800px) {
+  .bio-wrapper {
+    transform: translate(0, 40vh);
+  }
+
+  .bio-name {
+    font-size: 4vw;
+  }
+
+  .bio-subtitle {
+    font-size: 2vw;
+    margin-bottom: 10px;
+  }
+
+  .bio-about {
+    font-size: 1.5vw;
+  }
 }
 
 @media all and (max-width: 1200px) {
@@ -225,7 +255,7 @@ const heading = ref('Contact')
 /* Projects button */
 .projects-button-wrapper > .projects-button {
   color: darkslategray;
-  font-size: 2vw;
+  font-size: 1.5vw;
   font-weight: bold;
   text-decoration: none;
   background-color: lightcyan;
@@ -239,6 +269,12 @@ const heading = ref('Contact')
 .projects-button-wrapper > .projects-button:hover {
   background-color: cyan;
   border: 3px solid lightcyan;
+}
+
+@media all and (max-width: 1800px) {
+  .projects-button-wrapper > .projects-button {
+    font-size: 2vw;
+  }
 }
 
 @media all and (max-width: 1200px) {
@@ -272,16 +308,40 @@ const heading = ref('Contact')
 
 
 /* Education */
+.edu-section {
+  width: 100%;
+  height: 100%;
+}
+
+.edu-img {
+  position: absolute;
+  z-index: -1;
+}
+
+.edu-img > img {
+  width: 100%;
+  height: auto;
+}
+
+
 .edu-list {
   display: flex;
   flex-direction: column;
-  margin-left: 50px;
+  width: 40%;
+  height: 100vh;
+  background-color: rgba(245, 245, 245, 0.8);
+  backdrop-filter: blur(3px);
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  padding-left: 50px;
+  padding-right: 30px;
+  padding-bottom: 5vw;
 }
 
 .edu-list > .edu-title {
   font-size: 50px;
   font-weight: bold;
-  padding-top: 75px;
+  padding-top: 20px;
   margin-bottom: 50px;
 }
 
@@ -294,8 +354,14 @@ const heading = ref('Contact')
 }
 
 @media all and (max-width: 1200px) {
+  .edu-img {
+    display: none;
+  }
+
   .edu-list {
+    width: 90%;
     margin-left: 20px;
+    padding-right: 0px;
   }
 
   .edu-list > .edu-title {
