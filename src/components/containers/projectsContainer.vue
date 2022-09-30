@@ -9,10 +9,11 @@ const project_list = reactive([
     "grade": 100,
     "title": "Enoto",
     "subtitle": "a web-based Markdown editor.",
-    "body": `An app for editing Markdown documents that comes with a graphical css-based theme editor, 
-    a tool for inserting common Markdown snippets & the ability to export to an array of different file 
-    formats such as PDF. The Markdown parser uses the PythonMarkdown API for extended functionality & the 
-    theme editor uses a Python module I wrote for generating basic CSS templates.`,
+    "body": `A Markdown-based web app for creating simple websites and documents. Enoto features a text editor, 
+    a tool to insert Markdown snippets, a theme editor, support for exporting to different file formats, and the 
+    option to upload Markdown files. Enoto supports Markdown syntax such as lists, images, tables, etc. Enoto is 
+    also fully responsive and works on mobile. I decided to use the PythonMarkdown API for the parser, and the theme 
+    editor uses a Python module I wrote for generating basic CSS stylesheets.`,
     "image": "enoto",
     "imageAlt": "an image of Enoto with a markdown document open in the editor.",
     "tools": ["Flask", "Tailwind", "PIL", "PythonMarkdown API","Heroku"],
@@ -75,8 +76,8 @@ const project_list = reactive([
     "subtitle": "",
     "body": `This Recipes API helps you store the recipes of your favourite dishes alongside images & extra descriptions. 
     The purpose of this project was to learn and practise building a REST API. I learnt about RESTful API guidelines, HTTP 
-    requests & status codes, testing API endpoints with a REST Client (Postman & SwaggerUI), and Docker (Container, Image, 
-    Deploying on Docker Hub). I used FastAPI to build this project, SwaggerUI for the documentation website & Docker.`,
+    requests & status codes and testing API endpoints with a REST Client (Postman & SwaggerUI). I used FastAPI to build this 
+    project and SwaggerUI for the documentation website.`,
     "image": "docs_screenshot",
     "imageAlt": "an image of the Recipe API Swagger docs site.",
     "tools": ["FastAPI", "Pydantic", "Docker"],

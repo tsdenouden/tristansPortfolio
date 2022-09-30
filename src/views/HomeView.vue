@@ -83,14 +83,14 @@ const heading = ref('Contact')
   </div>
 
   <div class="edu-section">
-    <div class="edu-img">
-      <img src="../assets/pic/sample2.jpg" alt="Picture of me coding.">
-    </div>
     <div class="edu-list">
       <span class="edu-title">Education.</span>
       <eduContainer />
       <span class="edu-hr">Certificate courses.</span>
       <certsContainer />
+    </div>
+    <div class="edu-img">
+      <img src="../assets/pic/compimg.jpg" alt="Me sitting at the computer.">
     </div>
   </div>
 
@@ -211,7 +211,7 @@ const heading = ref('Contact')
 
 @media all and (max-width: 1800px) {
   .bio-wrapper {
-    transform: translate(0, 40vh);
+    transform: translate(0, 35vh);
   }
 
   .bio-name {
@@ -271,15 +271,9 @@ const heading = ref('Contact')
   border: 3px solid lightcyan;
 }
 
-@media all and (max-width: 1800px) {
-  .projects-button-wrapper > .projects-button {
-    font-size: 2vw;
-  }
-}
-
 @media all and (max-width: 1200px) {
   .projects-button-wrapper > .projects-button {
-    font-size: 20px;
+    font-size: 30px;
   }
 }
 
@@ -309,33 +303,16 @@ const heading = ref('Contact')
 
 /* Education */
 .edu-section {
-  width: 100%;
-  height: 100%;
+  display: flex;
+  align-items: center;
 }
-
-.edu-img {
-  position: absolute;
-  z-index: -1;
-}
-
-.edu-img > img {
-  width: 100%;
-  height: auto;
-}
-
 
 .edu-list {
   display: flex;
   flex-direction: column;
   width: 40%;
-  height: 100vh;
-  background-color: rgba(245, 245, 245, 0.8);
-  backdrop-filter: blur(3px);
-  border-top-right-radius: 20px;
-  border-bottom-right-radius: 20px;
   padding-left: 50px;
   padding-right: 30px;
-  padding-bottom: 5vw;
 }
 
 .edu-list > .edu-title {
@@ -351,6 +328,24 @@ const heading = ref('Contact')
   text-decoration: underline;
   margin-top: 15px;
   margin-bottom: 30px;
+}
+
+.edu-img {
+  width: 100%;
+  height:100%;
+  object-fit: cover;
+  overflow: hidden;
+}
+
+.edu-img > img {
+  width: 100%;
+  height: auto;
+}
+
+@media all and (max-width: 1800px) {
+  .edu-img {
+    width: 50%;
+  }
 }
 
 @media all and (max-width: 1200px) {
@@ -377,7 +372,21 @@ const heading = ref('Contact')
 
 /* Footer */
 #contact-footer {
-  margin-top: 100px;
+  margin-top: 50px;
   margin-inline: 40px;
+}
+
+@media all and (max-height: 800px) {
+  #contact-footer {
+    margin-top: 100px;
+    margin-inline: 40px;
+  }
+}
+
+@media all and (max-height: 600px) {
+  #contact-footer {
+    margin-top: 200px;
+    margin-inline: 40px;
+  }
 }
 </style>
